@@ -106,7 +106,7 @@ console.log(adoptedcats);
 // ---------------------------------------------------------------------------
 // Task 9 — Write makeSpeciesChecker (a closure)
 // ---------------------------------------------------------------------------
-
+/*
 function makeSpeciesChecker(animals) {
   return function (speciesname) {
     return animals.filter(function (SC) {
@@ -120,7 +120,7 @@ function makeSpeciesChecker(animals) {
       } else {
         return false;
       },
-          if (SC.species === "dog") {
+          if (SC.species === "rabbit") {
         return true;
       } else {
         return false;
@@ -128,12 +128,31 @@ function makeSpeciesChecker(animals) {
     });
   };
 }
-
+*/
 // ---------------------------------------------------------------------------
 // Task 10 — Build isDog and isRabbit, then log their names
 // ---------------------------------------------------------------------------
+/*
 let checkspecies = makespeciesechecher(animals);
 
 let isdog = checkspecies("dog");
 
 Command.log(isdog.map(AN));
+*/
+let isdog = animals.filter(function (dog) {
+  if (dog.species === "dog") {
+    return true;
+  } else {
+    return false;
+  }
+});
+
+let israbbit = animals.filter(function (rabbit) {
+  if (rabbit.species === "rabbit") {
+    return true;
+  } else {
+    return false;
+  }
+});
+console.log(isdog.map(AN));
+console.log(israbbit.map(AN));
