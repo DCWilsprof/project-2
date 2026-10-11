@@ -106,18 +106,34 @@ console.log(adoptedcats);
 // ---------------------------------------------------------------------------
 // Task 9 — Write makeSpeciesChecker (a closure)
 // ---------------------------------------------------------------------------
-function makespeciesechecher(animals){
-  let speciesname = func;
 
-  let speciescheck = animals.filter(function (SC) {
-    if animals.species === 
-  }
+function makeSpeciesChecker(animals) {
+  return function (speciesname) {
+    return animals.filter(function (SC) {
+      if (SC.species === "dog") {
+        return true;
+      } else {
+        return false;
+      },
+          if (SC.species === "cat") {
+        return true;
+      } else {
+        return false;
+      },
+          if (SC.species === "dog") {
+        return true;
+      } else {
+        return false;
+      },
+    });
+  };
+}
 
-
-)}
 // ---------------------------------------------------------------------------
 // Task 10 — Build isDog and isRabbit, then log their names
 // ---------------------------------------------------------------------------
-let isdog = makespeciesfunc('dog')
+let checkspecies = makespeciesechecher(animals);
 
-Command.log(isdog)
+let isdog = checkspecies("dog");
+
+Command.log(isdog.map(AN));
